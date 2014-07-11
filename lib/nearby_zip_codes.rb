@@ -1,12 +1,13 @@
 require 'nearby_zip_codes/version'
 require 'nearby_zip_codes/angular_distance_converter'
-Dir[File.join('nearby_zip_codes', 'readers', '*.rb')].each { |file| require_relative file }
+require 'nearby_zip_codes/readers/csv_reader'
+require 'nearby_zip_codes/readers/database_reader'
 
 module NearbyZipCodes
-  class NearbyZipCodes
+  class ZipCode
     attr_reader :zip_code, :long_lat_reader
 
-    def initialize(zip_code, long_lat_reader = DatabaseReader.new)
+    def initialize(zip_code, long_lat_reader = NearbyZipCodes::CSVReader.new)
       @zip_code = format("%05d", zip_code.to_s(radix(zip_code)))
       @long_lat_reader = long_lat_reader
     end

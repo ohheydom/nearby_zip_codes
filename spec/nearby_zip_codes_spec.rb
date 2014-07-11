@@ -1,6 +1,6 @@
 require_relative '../lib/nearby_zip_codes'
 
-describe NearbyZipCodes do
+describe NearbyZipCodes::ZipCode do
   describe '#new' do
     it 'sets the instance variable #zip_code' do
       expect(NearbyZipCodes::ZipCode.new(07424).instance_variables).to include(:@zip_code)
