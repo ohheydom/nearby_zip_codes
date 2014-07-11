@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ohheydom@gmail.com"]
   spec.summary       = %q{This Ruby gem searches for nearby zip codes.}
   spec.description   = %q{This Ruby gem searches for nearby zip codes within certain parameters.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ohheydom/nearby_zip_codes"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
