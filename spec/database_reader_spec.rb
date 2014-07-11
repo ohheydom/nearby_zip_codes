@@ -1,7 +1,7 @@
 require_relative '../lib/nearby_zip_codes/readers/database_reader.rb'
 
-describe DatabaseReader do
-  zip_code_db = DatabaseReader.new
+describe NearbyZipCodes::DatabaseReader do
+  zip_code_db = NearbyZipCodes::DatabaseReader.new
   nearby_zip_codes = %w(07006 07009 07012 07013 07021 07042 07044 07110 07424
                         07470 07501 07502 07503 07504 07505 07506 07508 07512
                         07513 07514 07522 07524)

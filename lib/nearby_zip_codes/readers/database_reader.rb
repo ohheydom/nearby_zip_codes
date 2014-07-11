@@ -5,7 +5,7 @@ module NearbyZipCodes
   class DatabaseReader
     attr_reader :distance_converter, :db
 
-    def initialize(database = 'data/zip_codes.sqlite3', adapter = 'sqlite', distance_converter = AngularDistanceConverter)
+    def initialize(database = '../../../data/zip_codes.sqlite3', adapter = 'sqlite', distance_converter = NearbyZipCodes::AngularDistanceConverter)
       @database = database
       @adapter = adapter
       @distance_converter = distance_converter
