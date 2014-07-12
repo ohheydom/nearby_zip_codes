@@ -10,11 +10,13 @@ Add this line to your application's Gemfile:
 ## Usage
 
 To use, type
+
 ```ruby
 zip = NearbyZipCodes::ZipCode.new(zip_code_in_string)
 ```
 
 Like so:
+
 ```ruby
 zip = NearbyZipCodes::ZipCode.new('12345')
 ```

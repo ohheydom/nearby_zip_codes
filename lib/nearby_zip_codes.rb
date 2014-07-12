@@ -8,7 +8,7 @@ module NearbyZipCodes
     attr_reader :zip_code, :long_lat_reader
 
     def initialize(zip_code, long_lat_reader = NearbyZipCodes::DatabaseReader.new)
-      @zip_code = format("%05s", zip_code)
+      @zip_code = zip_code
       @long_lat_reader = long_lat_reader
     end
 
@@ -26,12 +26,6 @@ module NearbyZipCodes
 
     def nearby_cities(miles = 5)
       long_lat_reader.cities_within_miles_of(zip_code, miles)
-    end
-
-    private
-
-    def radix(int)
-      int[0] == 0 ? 8 : 10
     end
   end
 end
