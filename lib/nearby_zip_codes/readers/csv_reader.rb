@@ -5,9 +5,10 @@ module NearbyZipCodes
   class CSVReader
     attr_reader :csv, :distance_converter
 
-    def initialize(csv_file = 'data/zip_codes.csv', distance_converter = NearbyZipCodes::AngularDistanceConverter)
+    def initialize(args = {})
+      csv_file = args[:csv_file] || File.join(File.dirname(__FILE__), '..', '..', '..', 'data', 'zip_codes.csv')
       @csv ||= CSV.read(csv_file, headers: true, header_converters: :symbol)
-      @distance_converter = distance_converter
+      @distance_converter = args[:distance_converter] || NearbyZipCodes::AngularDistanceConverter
     end
 
     def method_missing(meth, zip, &block)
