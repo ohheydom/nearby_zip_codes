@@ -8,7 +8,7 @@ module NearbyZipCodes
     attr_reader :zip_code, :long_lat_reader
 
     def initialize(zip_code, long_lat_reader = NearbyZipCodes::DatabaseReader.new)
-      @zip_code = format("%05d", zip_code.to_s(radix(zip_code)))
+      @zip_code = format("%05s", zip_code)
       @long_lat_reader = long_lat_reader
     end
 

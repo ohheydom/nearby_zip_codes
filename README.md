@@ -11,7 +11,12 @@ Add this line to your application's Gemfile:
 
 To use, type
 ```ruby
-zip = NearbyZipCodes::ZipCode.new(zip_code)
+zip = NearbyZipCodes::ZipCode.new(zip_code_in_string)
+```
+
+Like so:
+```ruby
+zip = NearbyZipCodes::ZipCode.new('12345')
 ```
 
 To return nearby zip codes within 5 miles, type
