@@ -7,7 +7,7 @@ module NearbyZipCodes
   class ZipCode
     attr_reader :zip_code, :long_lat_reader
 
-    def initialize(zip_code, long_lat_reader = NearbyZipCodes::DatabaseReader.new)
+    def initialize(zip_code, long_lat_reader = DatabaseReader.new)
       @zip_code = zip_code
       @long_lat_reader = long_lat_reader
     end

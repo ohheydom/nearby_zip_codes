@@ -8,7 +8,7 @@ module NearbyZipCodes
     def initialize(args = {})
       csv_file = args[:csv_file] || File.join(File.dirname(__FILE__), '..', '..', '..', 'data', 'zip_codes.csv')
       @csv ||= CSV.read(csv_file, headers: true, header_converters: :symbol)
-      @distance_converter = args[:distance_converter] || NearbyZipCodes::AngularDistanceConverter
+      @distance_converter = args[:distance_converter] || AngularDistanceConverter
     end
 
     def method_missing(meth, zip, &block)
@@ -35,7 +35,7 @@ module NearbyZipCodes
     def results_within_range_of(distances)
       csv.select do |row|
         row[:latitude].to_f.between?(*distances.latitude_range) &&
-          row[:longitude].to_f.between?(*distances.longitude_range)
+        row[:longitude].to_f.between?(*distances.longitude_range)
       end
     end
   end
