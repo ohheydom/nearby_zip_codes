@@ -1,5 +1,7 @@
 # NearbyZipCodes
 
+NearbyZipCodes is a ruby gem that will return nearby zip codes and towns/cities given a zip code.
+
 ## Installation
 
 Add this line to your application's Gemfile:
