@@ -1,6 +1,5 @@
 # NearbyZipCodes
 
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -9,7 +8,7 @@ Add this line to your application's Gemfile:
 
 ## Usage
 
-To use, type
+To use, create a zipcode object containing a zip code:
 
 ```ruby
 zip = NearbyZipCodes::ZipCode.new(zip_code_in_string)
@@ -21,19 +20,19 @@ Like so:
 zip = NearbyZipCodes::ZipCode.new('12345')
 ```
 
-To return nearby zip codes within 5 miles, type
+To return nearby zip codes within 5 miles, type:
 
 ```ruby
 zip.nearby_zip_codes
 ```
 
-To return nearby cities within 5 miles, type
+To return nearby cities within 5 miles, type:
 
 ```ruby
 zip.nearby_cities
 ```
 
-You can also pass an argument to both methods. For instance, if you want to return the zip codes within 15 miles, type
+You can also pass an additional argument to both methods to return nearby cities or zip codes within a certain mileage. For instance, if you want to return the zip codes within 15 miles, type:
 
 ```ruby
 zip.nearby_zip_codes(15)
